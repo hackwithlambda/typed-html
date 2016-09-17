@@ -1,8 +1,6 @@
 {-# LANGUAGE DataKinds #-}
 
-module Lib
-    (
-    ) where
+module Html where
 
 data Tree Tag a
   = Leaf tag a
@@ -12,10 +10,12 @@ type Html = Tree Tag
 
 newtype Attr = Attr { getAttr :: (Property, Value) }
 
-data Property = Src
+data Property
+  = Src
   | Href
 
-data Tag = Head
+data Tag
+  = Head
   | P
   | I
   | Strong
